@@ -4,7 +4,7 @@ RUN echo "hello world"
 
 # Install Curl
 RUN apt-get update
-RUN apt-get install -y curl
+RUN apt-get install -y curl gnupg
 
 # Install Docker
 RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
