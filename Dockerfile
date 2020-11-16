@@ -4,11 +4,11 @@ RUN echo "hello world"
 
 # Install Curl
 RUN apt-get update
-RUN apt-get install -y curl gnupg software-properties-common lsb_core
+RUN apt-get install -y curl gnupg software-properties-common
 
 # Install Docker
 RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
-RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian focal stable"
 RUN apt-get update
 RUN apt-get -y install docker-ce
 RUN docker run hello-world
