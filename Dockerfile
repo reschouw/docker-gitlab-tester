@@ -8,7 +8,7 @@ RUN apt-get install -y curl gnupg software-properties-common
 
 # Install Docker
 RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
-RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu/dists/focal stable"
+RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
 RUN apt-get update
 RUN apt-get -y install docker-ce
 RUN docker run hello-world
